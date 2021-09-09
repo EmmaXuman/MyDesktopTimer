@@ -1,0 +1,28 @@
+﻿<Window x:Class="Wpf_MyTimmer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_MyTimmer"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" AllowsTransparency="True"
+        Background="Transparent" ShowInTaskbar="False" 
+        WindowStyle="None">
+
+    <Grid Margin="0,0,0,0">
+        <Rectangle x:Name="backGround" Fill="Black" Opacity="0.5" MouseMove="backGround_MouseMove"/>
+        <Rectangle Margin="497,125,133,155" Fill="White" Width="170" Height="170"/>
+        <Rectangle Margin="289,125,341,155" Fill="White" Width="170" Height="170"/>
+        <Label x:Name="Minute" Content="0" FontSize="40" HorizontalAlignment="Left" Margin="329,179,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="second" Content="0" FontSize="40" HorizontalAlignment="Left" Margin="527,179,0,0" VerticalAlignment="Top"/>
+        <Rectangle Margin="73,125,557,155" Fill="White" Width="170" Height="170"/>
+        <Label x:Name="Hour" Content="0" FontSize="40" HorizontalAlignment="Left" Margin="102,180,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.17,0.791"/>
+        <RadioButton x:Name="rdoBtnclock" Click="rdoBtnclock_Click" GroupName="A" Content="时钟" IsChecked="True" FontSize="20" HorizontalAlignment="Left" Margin="224,385,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <RadioButton x:Name="rdoBtnTimer" Click="rdoBtnTimer_Click" GroupName="A" Content="倒计时" FontSize="20" HorizontalAlignment="Left" Margin="400,385,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Button x:Name="btn_StartTimmer" Click="btn_StartTimmer_Click" Content="开始计时" FontSize="15" HorizontalAlignment="Left" Margin="568,384,0,0" VerticalAlignment="Top" Width="80" Height="30"/>
+        <TextBox x:Name="tbh" FontSize="20" Visibility="Hidden" HorizontalAlignment="Left" Margin="102,190,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="101" Height="38"/>
+        <TextBox x:Name="tbm" FontSize="20" Visibility="Hidden" HorizontalAlignment="Left" Margin="329,191,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="101" Height="38"/>
+        <TextBox x:Name="tbs" FontSize="20" Visibility="Hidden" HorizontalAlignment="Left" Margin="527,190,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="101" Height="38"/>
+        <Button x:Name="btn_StopTimmer" Click="btn_StopTimmer_Click" Content="停止计时" FontSize="15" HorizontalAlignment="Left" Margin="669,382,0,0" VerticalAlignment="Top" Width="80" Height="30"/>
+    </Grid>
+</Window>
